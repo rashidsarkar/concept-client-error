@@ -1,7 +1,8 @@
 import { useSearchParams } from "react-router-dom";
-import Container from "../Shared/Container";
+
 import { categories } from "./CategorisData";
 import CategoryBox from "./CategoryBox";
+import Container from "../Shared/Container";
 
 function Categories() {
   const [params, setParams] = useSearchParams();

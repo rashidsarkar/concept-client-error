@@ -1,11 +1,16 @@
-import useRoomData from "../../API/useRoomData";
+import { useSearchParams } from "react-router-dom";
+
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import CustomLoading from "../Loader/CustomLoading";
 import Container from "../Shared/Container";
 import Card from "./Card";
+import axiosInstancePublic from "../../AxiosAPI/axiosInstancePublic";
+import { useQuery } from "@tanstack/react-query";
+import useRoomData from "../../API/useRoomData";
 
 function Rooms() {
   const { roomsData, isLoading, isError, error } = useRoomData();
+
   if (isLoading) return <CustomLoading></CustomLoading>;
   if (isError) return <ErrorMessage error={error}></ErrorMessage>;
 
