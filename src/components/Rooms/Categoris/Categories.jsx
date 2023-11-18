@@ -1,13 +1,23 @@
+import { useSearchParams } from "react-router-dom";
 import Container from "../../Shared/Container";
 import { categories } from "./CategorisData";
 import CategoryBox from "./CategoryBox";
 
 function Categories() {
+  const [params, setParams] = useSearchParams();
+  const categoryParams = params.get("category");
+  // console.log(categoryParams);
   return (
     <Container>
       <div className="pt-4 flex items-center justify-between overflow-x-auto">
-        {categories.map((categorie, idx) => {
-          return <CategoryBox key={idx} categoryBox={categorie}></CategoryBox>;
+        {categories.map((category, idx) => {
+          return (
+            <CategoryBox
+              key={idx}
+              selected={categoryParams === category.label}
+              categoryBox={category}
+            ></CategoryBox>
+          );
         })}
       </div>
     </Container>
