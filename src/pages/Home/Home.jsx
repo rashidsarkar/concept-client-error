@@ -1,4 +1,4 @@
-import Categories from "../../components/Rooms/Categoris/Categories";
+import Categories from "../../components/Categoris/Categories";
 import Rooms from "../../components/Rooms/Rooms";
 
 const Home = () => {
