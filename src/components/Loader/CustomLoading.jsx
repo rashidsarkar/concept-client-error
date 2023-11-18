@@ -1,6 +1,6 @@
 function CustomLoading() {
   return (
-    <div className="flex items-center justify-center md:min-h-screen">
+    <div className="flex items-center justify-center md:min-h-[70vh]">
       <div
         aria-label="Loading..."
         role="status"
