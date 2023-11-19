@@ -18,8 +18,11 @@ function RoomDetails() {
       <Helmet>
         <title>{singleRoomData.title}</title>
       </Helmet>
-      <h1 className="text-3xl font-bold">Room Details</h1>
-      <p>{singleRoomData.title}</p>
+      <div>
+        <div className="flex flex-col gap-6">{/* header */}</div>
+        <div>{/* room info */}</div>
+        <div>{/*  calender */}</div>
+      </div>
     </Container>
   );
 }
