@@ -21,7 +21,7 @@ function RoomDetails() {
       <div>
         <div className="flex flex-col gap-6">{/* header */}</div>
         <div>{/* room info */}</div>
-        <div>{/*  calender */}</div>
+        <div>{/* calender */}</div>
       </div>
     </Container>
   );
