@@ -2,8 +2,9 @@ import { useQuery } from "@tanstack/react-query";
 import axiosInstancePublic from "../AxiosAPI/axiosInstancePublic";
 import { useParams } from "react-router-dom";
 function useSingleRoomData() {
-  const { id } = useParams();
   // console.log(id);
+  const { id } = useParams();
+  console.log(id);
   const {
     data: singleRoomData,
     isLoading,
@@ -18,7 +19,7 @@ function useSingleRoomData() {
       // http://localhost:8000/api/singleRoomData/6558af9ffc3e8fb3c6035066
       return res.data;
     },
-    queryKey: ["roomsData"],
+    queryKey: ["singleRoomData"],
   });
 
   return { singleRoomData, isLoading, isError, error };
